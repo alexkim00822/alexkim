@@ -120,6 +120,10 @@ p{margin:0 0 14px}
 .path li.now{border-color:var(--violet);background:var(--violet);color:#fff}
 .path li.arrow{border:0;padding:0;color:#a3a6af}
 
+.card.wait{grid-column:1/-1}
+.waitpics{display:grid;grid-template-columns:2fr 2fr 1fr 1fr;gap:10px;margin:16px 0 12px;align-items:start}
+.waitpics img{width:100%;border:1px solid var(--rule);border-radius:8px}
+@media (max-width:640px){.waitpics{grid-template-columns:1fr 1fr}}
 /* more */
 .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .small h3{font-size:19px}
@@ -229,19 +233,7 @@ footer b{color:#fff;font-weight:500}
       </div>
     </article>
 
-    <div class="grid3">
-      <article class="card">
-        <p class="tag">School research team</p>
-        <h3>Coding Analyst</h3>
-        <p class="meta">Bergen Catholic Independent Science Research Team · Grades 10 to 12</p>
-        <p>I write the code and run the data analysis for the team’s research projects, which are supervised by science faculty.</p>
-      </article>
-      <article class="card">
-        <p class="tag">Hospital internship</p>
-        <h3>Marketing Intern, Honors Research Internship</h3>
-        <p class="meta">Holy Name Medical Center · Fall 2026</p>
-        <p>I was selected for Bergen Catholic’s Clinical Internship Program. As a marketing intern, I study data-driven marketing and community health outreach. The internship ends with a research paper and an oral defense.</p>
-      </article>
+    <div class="grid2">
       <article class="card">
         <p class="tag">Summer program</p>
         <h3>Summer at Tandon SPARC</h3>
@@ -308,12 +300,20 @@ footer b{color:#fff;font-weight:500}
         <p>VOY launched its second app, Mo Ri, for students with ADHD, in October 2026.</p>
         <div class="links"><a href="https://mo-soop.glide.page" target="_blank" rel="noopener">Open Mo Soop</a><a href="https://mo-ri.glide.page" target="_blank" rel="noopener">Open Mo Ri</a></div>
       </article>
-      <article class="card">
+      <article class="card wait">
         <p class="tag">Student leadership</p>
         <h3>YGLE: Young Global Leaders of the East</h3>
         <p class="meta">Student Vice President · Grades 9 to 12</p>
         <ul class="path"><li>Member</li><li class="arrow">›</li><li>Event Organizing Team Leader</li><li class="arrow">›</li><li class="now">Student Vice President</li></ul>
         <p>I organized YGLE’s 2nd Annual Global Leadership Forum in 2025, on the theme of peace. When our team split over which issues to feature, I merged both sides into one program.</p>
+        <p>As Student Vice President I also sat on the decisions behind <b>THE WAIT</b>, YGLE’s project for Korean immigrants who put off going to the hospital because of language. The team made a bilingual card a patient can point to at a hospital or dental visit, reviewed by a nurse and a dentist; 300 cards have been donated in New Jersey and New York. Two large-print flyers list free and low-cost health screenings and dental clinics in Bergen County. The team also filmed a documentary.</p>
+        <div class="waitpics">
+          <img src="assets/the-wait-card-a.jpg" alt="THE WAIT card, front panels: I need a Korean interpreter, hospital visit symptom pointing chart" loading="lazy">
+          <img src="assets/the-wait-card-b.jpg" alt="THE WAIT card, back panels: dental visit chart, communication prompts and how to use the card" loading="lazy">
+          <img src="assets/the-wait-flyer-1.jpg" alt="THE WAIT flyer on free health screening and support services in Bergen County, in Korean and English" loading="lazy">
+          <img src="assets/the-wait-flyer-2.jpg" alt="THE WAIT flyer on low-cost dental care services in Bergen County, in Korean and English" loading="lazy">
+        </div>
+        <div class="links"><a href="assets/the-wait-card.pdf" target="_blank" rel="noopener">The card (PDF)</a><a href="assets/the-wait-flyers.pdf" target="_blank" rel="noopener">The two flyers (PDF)</a><a href="https://www.youtube.com/watch?v=8lQXujgL2L8" target="_blank" rel="noopener">THE WAIT documentary on YouTube</a></div>
       </article>
       <article class="card">
         <p class="tag">New this year</p>
@@ -344,7 +344,7 @@ footer b{color:#fff;font-weight:500}
       <article class="card small">
         <p class="tag">Music</p>
         <h3>Viola</h3>
-        <p>I have played viola for four years in the Bergen Catholic Chamber Ensemble and in the Arco Youth Orchestra.</p>
+        <p>I have played viola for four years in the Bergen Catholic Chamber Ensemble and in the Arco Youth Orchestra. In the summer I teach viola to beginning students as a paid job.</p>
       </article>
       <article class="card small">
         <p class="tag">Tennis</p>
