@@ -1,0 +1,392 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Alex Kim</title>
+<meta name="description" content="Alex Kim, Bergen Catholic High School, Class of 2027. Computer science and psychology, independent AI research, tutoring, and service in Bergen County, New Jersey.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2317181d'/%3E%3Crect x='40' y='40' width='12' height='12' rx='2' fill='%23d6f25f'/%3E%3Ctext x='29' y='41' font-family='Arial' font-weight='700' font-size='24' text-anchor='middle' fill='%23ffffff'%3EAK%3C/text%3E%3C/svg%3E">
+<style>
+@font-face{font-family:"Space Grotesk";src:url(assets/fonts/space-grotesk-latin-500-normal.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Space Grotesk";src:url(assets/fonts/space-grotesk-latin-700-normal.woff2) format("woff2");font-weight:700;font-display:swap}
+@font-face{font-family:"IBM Plex Sans";src:url(assets/fonts/ibm-plex-sans-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"IBM Plex Sans";src:url(assets/fonts/ibm-plex-sans-latin-400-italic.woff2) format("woff2");font-weight:400;font-style:italic;font-display:swap}
+@font-face{font-family:"IBM Plex Sans";src:url(assets/fonts/ibm-plex-sans-latin-600-normal.woff2) format("woff2");font-weight:600;font-display:swap}
+@font-face{font-family:"IBM Plex Mono";src:url(assets/fonts/ibm-plex-mono-latin-400-normal.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"IBM Plex Mono";src:url(assets/fonts/ibm-plex-mono-latin-500-normal.woff2) format("woff2");font-weight:500;font-display:swap}
+
+:root{
+  --graphite:#17181d;
+  --graphite-2:#24262d;
+  --ink:#1c1d22;
+  --ink-2:#4d505a;
+  --paper:#f7f6f2;
+  --card:#ffffff;
+  --rule:#dfdcd4;
+  --violet:#5a3fd1;
+  --violet-deep:#40299f;
+  --violet-soft:#eeeafc;
+  --lime:#d6f25f;
+  --display:"Space Grotesk","Helvetica Neue",Arial,sans-serif;
+  --body:"IBM Plex Sans","Helvetica Neue",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+figure{margin:0}
+a{color:var(--violet);text-decoration:none}
+a:hover{text-decoration:underline}
+.wrap{max-width:1140px;margin:0 auto;padding:0 28px}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:30;background:rgba(23,24,29,.96);backdrop-filter:saturate(1.2) blur(6px);border-bottom:1px solid #2e3038}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px;gap:20px}
+.brand{font-family:var(--display);font-weight:700;font-size:20px;color:#fff;letter-spacing:.2px;display:flex;align-items:center;gap:10px}
+.brand i{display:inline-block;width:11px;height:11px;background:var(--lime);border-radius:2px}
+.brand:hover{text-decoration:none}
+.nav ul{list-style:none;margin:0;padding:0;display:flex;gap:26px}
+.nav ul a{font-family:var(--mono);font-size:13px;letter-spacing:.06em;text-transform:uppercase;color:#c9cbd3}
+.nav ul a:hover{color:var(--lime);text-decoration:none}
+
+/* hero */
+.hero{background:var(--graphite);color:#eef0f4;padding:76px 0 84px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;inset:0;background-image:linear-gradient(#ffffff0a 1px,transparent 1px),linear-gradient(90deg,#ffffff0a 1px,transparent 1px);background-size:44px 44px;pointer-events:none}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.25fr .9fr;gap:56px;align-items:start}
+.eyebrow{font-family:var(--mono);font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#a9acb7;margin:0 0 18px}
+.hero h1{font-family:var(--display);font-weight:700;font-size:clamp(52px,7vw,92px);line-height:.98;margin:0 0 26px;letter-spacing:-1.5px;color:#fff}
+.hero .lede{font-size:20px;line-height:1.6;color:#d9dbe2;margin:0 0 30px;max-width:40em}
+.hl{background:linear-gradient(transparent 62%,rgba(214,242,95,.42) 62%);color:#fff}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{font-family:var(--mono);font-size:13px;letter-spacing:.06em;text-transform:uppercase;padding:12px 18px;border-radius:999px;border:1px solid #4a4d57;color:#fff}
+.btn:hover{text-decoration:none;border-color:var(--lime);color:var(--lime)}
+.btn.solid{background:var(--lime);border-color:var(--lime);color:var(--graphite)}
+.btn.solid:hover{background:#e4f78f;color:var(--graphite)}
+.glance{background:var(--graphite-2);border:1px solid #363944;border-radius:16px;padding:8px 26px;margin-top:6px}
+.glance div{padding:16px 0;border-bottom:1px solid #353843}
+.glance div:last-child{border-bottom:0}
+.glance dt{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--lime);margin-bottom:4px}
+.glance dd{margin:0;color:#e7e9ee;font-size:16px;line-height:1.5}
+
+/* sections */
+section.block{padding:84px 0 20px}
+.shead{display:flex;align-items:baseline;gap:18px;margin-bottom:34px;border-bottom:2px solid var(--ink);padding-bottom:14px}
+.shead .num{font-family:var(--mono);font-size:15px;color:var(--violet);font-weight:500}
+.shead h2{font-family:var(--display);font-weight:700;font-size:clamp(32px,4vw,46px);line-height:1.05;margin:0;letter-spacing:-.6px}
+.shead p{margin:0 0 0 auto;font-family:var(--mono);font-size:13px;color:var(--ink-2);text-transform:uppercase;letter-spacing:.06em}
+h3{font-family:var(--display);font-weight:700;font-size:24px;line-height:1.2;margin:0 0 6px;letter-spacing:-.2px}
+.meta{font-family:var(--mono);font-size:13.5px;color:var(--ink-2);margin:0 0 16px;line-height:1.55}
+.meta b{color:var(--violet);font-weight:500}
+p{margin:0 0 14px}
+
+/* research feature */
+.feature{display:grid;grid-template-columns:10px 1fr;background:var(--card);border:1px solid var(--rule);border-radius:18px;overflow:hidden;margin-bottom:26px}
+.feature .band{background:var(--violet)}
+.feature .in{padding:34px 38px 30px}
+.feature h3{font-size:30px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:18px 0 6px;padding:0;list-style:none}
+.chips li{font-family:var(--mono);font-size:12.5px;background:var(--violet-soft);color:var(--violet-deep);padding:6px 11px;border-radius:999px}
+.status{display:inline-flex;align-items:flex-start;gap:8px;line-height:1.5;font-family:var(--mono);font-size:13px;color:var(--ink-2);margin-top:10px}
+.status:before{content:"";flex:none;margin-top:5px;width:9px;height:9px;border-radius:50%;background:#9bc21c;box-shadow:0 0 0 4px #d6f25f66}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:22px}
+.card{background:var(--card);border:1px solid var(--rule);border-radius:16px;padding:26px 28px 22px}
+.card h3{font-size:21px}
+.card p:last-child{margin-bottom:0}
+.note{font-family:var(--mono);font-size:13px;color:var(--ink-2);margin:22px 0 0;line-height:1.6}
+.links{font-family:var(--mono);font-size:13px;display:flex;flex-wrap:wrap;gap:6px 16px;margin-top:6px}
+
+/* tutoring */
+.tutor{display:grid;grid-template-columns:.85fr 1.6fr;gap:40px;align-items:start}
+.tutor .text{position:sticky;top:90px}
+.big{font-size:19px;line-height:1.65}
+.photoset{margin:0 0 26px}
+.photoset .row{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.photoset .row.two{grid-template-columns:1fr 1fr}
+.photoset img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:12px;background:#ddd}
+.photoset figcaption{font-family:var(--mono);font-size:13px;color:var(--ink-2);margin-top:10px;line-height:1.5}
+.photoset figcaption b{color:var(--ink);font-weight:500}
+
+/* cdhw */
+.cdhw{display:grid;grid-template-columns:1.05fr 1fr;gap:34px;background:var(--card);border:1px solid var(--rule);border-radius:18px;padding:34px;margin-bottom:24px}
+.cdhw .pics{display:grid;grid-template-columns:1fr 1fr;gap:12px;align-content:start}
+.cdhw .pics img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:12px}
+.cdhw .pics figcaption{grid-column:1/-1;font-family:var(--mono);font-size:13px;color:var(--ink-2);line-height:1.5}
+.award{display:flex;gap:12px;align-items:flex-start;background:var(--graphite);color:#eef0f4;border-radius:12px;padding:14px 16px;margin-top:18px}
+.award span{font-family:var(--mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--graphite);background:var(--lime);padding:3px 8px;border-radius:6px;white-space:nowrap;margin-top:2px}
+.award p{margin:0;font-size:15.5px;line-height:1.5}
+.path{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:0 0 14px;padding:0;list-style:none;font-family:var(--mono);font-size:12.5px}
+.path li{border:1px solid var(--rule);border-radius:999px;padding:4px 10px;color:var(--ink-2)}
+.path li.now{border-color:var(--violet);background:var(--violet);color:#fff}
+.path li.arrow{border:0;padding:0;color:#a3a6af}
+
+/* more */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.small h3{font-size:19px}
+.small p{font-size:16px}
+.small p.tag{font-size:12px}
+.tag{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--violet);margin:0 0 8px}
+
+.orch{display:grid;grid-template-columns:2fr 1fr 1fr;gap:12px;margin:0 0 24px}
+.orch img{width:100%;height:100%;aspect-ratio:4/3;object-fit:cover;border-radius:12px}
+.orch img.wide{aspect-ratio:auto}
+.orch figcaption{grid-column:1/-1;font-family:var(--mono);font-size:13px;color:var(--ink-2)}
+@media (max-width:640px){.orch{grid-template-columns:1fr 1fr}.orch img.wide{grid-column:1/-1}}
+/* honors */
+.honors{display:grid;grid-template-columns:1.25fr 1fr;gap:34px;align-items:start}
+.hlist{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
+.hlist li{display:grid;grid-template-columns:96px 1fr;gap:16px;padding:20px 0;border-bottom:1px solid var(--rule)}
+.hlist .yr{font-family:var(--mono);font-size:14px;color:var(--violet);padding-top:3px}
+.hlist b{font-family:var(--display);font-size:19px;font-weight:700;display:block;line-height:1.3;margin-bottom:3px}
+.hlist span{color:var(--ink-2);font-size:15.5px}
+.cert{background:var(--card);border:1px solid var(--rule);border-radius:16px;padding:14px}
+.cert img{border-radius:8px;border:1px solid #eee}
+.cert figcaption{font-family:var(--mono);font-size:13px;color:var(--ink-2);margin-top:10px}
+
+footer{margin-top:90px;background:var(--graphite);color:#a9acb7;font-family:var(--mono);font-size:13px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding-top:28px;padding-bottom:30px}
+footer b{color:#fff;font-weight:500}
+
+@media (max-width:920px){
+  .hero .wrap,.tutor,.cdhw,.honors{grid-template-columns:1fr}
+  .tutor .text{position:static}
+  .grid3{grid-template-columns:1fr 1fr}
+  .nav ul{display:none}
+}
+@media (max-width:640px){
+  .wrap{padding:0 16px}
+  body{font-size:16px}
+  .hero{padding:52px 0 60px}
+  .hero .lede{font-size:18px}
+  .grid2,.grid3{grid-template-columns:1fr}
+  .feature .in{padding:26px 22px 22px}
+  .cdhw{padding:22px}
+  .photoset .row{grid-template-columns:1fr 1fr}
+  .shead{flex-wrap:wrap;gap:6px 14px}
+  .shead p{margin:0;flex-basis:100%}
+  section.block{padding:60px 0 10px}
+  .hlist li{grid-template-columns:1fr;gap:2px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav class="nav" aria-label="Main">
+  <div class="wrap">
+    <a class="brand" href="#top"><i></i>Alex Kim</a>
+    <ul>
+      <li><a href="#research">Research</a></li>
+      <li><a href="#tutoring">Tutoring</a></li>
+      <li><a href="#service">Leadership</a></li>
+      <li><a href="#more">More</a></li>
+      <li><a href="#honors">Honors</a></li>
+    </ul>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow">Bergen Catholic High School · Class of 2027 · Oradell, New Jersey</p>
+      <h1>Alex Kim</h1>
+      <p class="lede">I want to study <span class="hl">computer science and psychology together</span> and learn to design technology around the way people actually think. Outside class, I tutor students in math and science, keep the impact records for a student group that donates new clothing to children in hospitals, and track how many teens use a peer support app my student group launched.</p>
+      <div class="btns">
+        <a class="btn solid" href="#research">Research</a>
+        <a class="btn" href="#tutoring">Tutoring</a>
+        <a class="btn" href="#service">Leadership and service</a>
+      </div>
+    </div>
+    <dl class="glance">
+      <div><dt>What I want to study</dt><dd>Computer science and psychology, together</dd></div>
+      <div><dt>Senior year</dt><dd>AP Psychology, AP Cybersecurity, AP Calculus AB, AP Biology, AP English Literature</dd></div>
+      <div><dt>Languages</dt><dd>English (native), Korean (fluent), Mandarin (two years of honors study)</dd></div>
+      <div><dt>Recognition</dt><dd>Scholastic Art &amp; Writing Awards, Silver Key, Critical Essay (2026)</dd></div>
+    </dl>
+  </div>
+</header>
+
+<main>
+
+<section class="block" id="research">
+  <div class="wrap">
+    <div class="shead"><span class="num">01</span><h2>Research and building</h2><p>Independent and school research</p></div>
+
+    <article class="feature">
+      <div class="band"></div>
+      <div class="in">
+        <p class="tag">Independent research</p>
+        <h3>Telling pills apart</h3>
+        <p class="meta"><b>2025 to present</b> · Early development mentored by a biostatistician at Johns Hopkins Hospital · Carried out with the Bergen County Youth Assembly’s Active Bergen (Health and Safety) group</p>
+        <p class="big">I built a Python model that sorts pills by shape, color and size, trained on 8,784 reference photos of 4,231 different medicines from the National Institutes of Health. The goal is a tool that helps older adults and people with low vision notice when two of their medicines look alike.</p>
+        <p>I compared two approaches. The first measures each pill with OpenCV (how round the outline is, its average color, its width in pixels) and hands those numbers to a Random Forest; it reached 93% accuracy on shape and 85% on color. The second retrains a ResNet18 neural network in PyTorch on the same photos; it reached 95% on shape and 89% on color. Both models make the same mistakes, such as calling a capsule an oval or a red pill pink, which says more about where the NIH labels blur together than about the models.</p>
+        <p>The data also showed why the tool matters. Of the 4,089 medicines with full labels, 98.5% share their shape, color and size (within one millimeter) with at least one other medicine, and the typical pill has 60 such look-alikes. Round white pills about 6 mm across alone cover 183 different medicines. Shape, color and size cannot identify a pill; only the imprint can. So the finished tool does not name a medicine. It compares two pills and rates the risk of mixing them up as high, medium or low, so they can be stored and labeled separately.</p>
+        <ul class="chips">
+          <li>Python</li><li>OpenCV + Random Forest</li><li>ResNet18, PyTorch</li><li>8,784 NIH photos</li><li>4,231 medicines</li>
+        </ul>
+        <span class="status">Completed: first model trained and evaluated. Next: testing on phone photos instead of lab photos.</span>
+        <div class="links" style="margin-top:14px"><a href="assets/telling-pills-apart-report.pdf" target="_blank" rel="noopener">Read the full project report (PDF, 7 pages)</a></div>
+      </div>
+    </article>
+
+    <div class="grid3">
+      <article class="card">
+        <p class="tag">School research team</p>
+        <h3>Coding Analyst</h3>
+        <p class="meta">Bergen Catholic Independent Science Research Team · Grades 10 to 12</p>
+        <p>I write the code and run the data analysis for the team’s research projects, which are supervised by science faculty.</p>
+      </article>
+      <article class="card">
+        <p class="tag">Hospital internship</p>
+        <h3>Marketing Intern, Honors Research Internship</h3>
+        <p class="meta">Holy Name Medical Center · Fall 2026</p>
+        <p>I was selected for Bergen Catholic’s Clinical Internship Program. As a marketing intern, I study data-driven marketing and community health outreach. The internship ends with a research paper and an oral defense.</p>
+      </article>
+      <article class="card">
+        <p class="tag">Summer program</p>
+        <h3>Summer at Tandon SPARC</h3>
+        <p class="meta">NYU Tandon School of Engineering · July 7 to 18, 2025</p>
+        <p>Two weeks of automation, robotics and coding, where I built projects with microcontrollers, sensors and actuators.</p>
+      </article>
+    </div>
+    <p class="note">Also completed: HP LIFE online courses from the HP Foundation, October 2026: <a href="assets/hp-life-strategic-planning.pdf" target="_blank" rel="noopener">Strategic Planning in the AI Age</a>, <a href="assets/hp-life-critical-thinking.pdf" target="_blank" rel="noopener">Critical Thinking in the AI Era</a>, and <a href="assets/hp-life-cybersecurity.pdf" target="_blank" rel="noopener">Introduction to Cybersecurity Awareness</a>.</p>
+  </div>
+</section>
+
+<section class="block" id="tutoring">
+  <div class="wrap">
+    <div class="shead"><span class="num">02</span><h2>Tutoring</h2><p>Walk Alongside</p></div>
+    <div class="tutor">
+      <div class="text">
+        <h3>Mentor and Tutor</h3>
+        <p class="meta">Walk Alongside · Grades 9 to 12</p>
+        <p class="big">Walk Alongside offers free tutoring and mentoring to students who do not have private academic help. I tutor math and science.</p>
+        <p>With four other tutors, I also built free study materials in five subjects for the group’s online library.</p>
+        <div class="award"><span>Award</span><p>Student-Choice Mentorship Award, Walk Alongside (2026). My mentees chose me for keeping sessions friendly and for helping without making anyone feel small.</p></div>
+      </div>
+      <div>
+        <figure class="photoset">
+          <div class="row two">
+            <img src="assets/tutor-division-1.jpg" alt="Alex Kim beside a young student as she works through a long division worksheet" loading="lazy">
+            <img src="assets/tutor-equations-2.jpg" alt="Alex Kim leaning in as a young student points to her work on two-step equations" loading="lazy">
+          </div>
+          <figcaption><b>Left:</b> long division, dividing five-digit numbers by two-digit numbers. <b>Right:</b> two-step equations, undoing addition or subtraction first, then multiplication or division.</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="service">
+  <div class="wrap">
+    <div class="shead"><span class="num">03</span><h2>Leadership and service</h2><p>Since ninth grade</p></div>
+
+    <article class="cdhw">
+      <div>
+        <p class="tag">Clothing for children in the hospital</p>
+        <h3>CDHW: Clothing Donations to Help Kids in the World</h3>
+        <p class="meta">Leading Coordinator · Grades 9 to 12</p>
+        <ul class="path"><li>Liaison</li><li class="arrow">›</li><li class="now">Leading Coordinator</li></ul>
+        <p>CDHW brings new clothing to children being treated in New Jersey hospitals, including Hackensack University Medical Center. Our team has delivered more than $15,000 in new clothing.</p>
+        <p>I keep the impact ledger: what we donated, what it was worth, and how many children it reached. I also handwrite notes for the donation packages.</p>
+        <div class="award"><span>Award</span><p>Outstanding Service Award, given in 2025 for more than 200 total volunteer hours with CDHW</p></div>
+      </div>
+      <figure class="pics">
+        <img src="assets/cdhw-hackensack-sign.jpg" alt="Alex Kim and four other CDHW volunteers holding donation boxes and a thank you sign outside Joseph M. Sanzari Children’s Hospital" loading="lazy">
+        <img src="assets/cdhw-hackensack-boxes.jpg" alt="CDHW volunteers passing boxes of donations outside the children’s hospital" loading="lazy">
+        <figcaption>Delivering donations to Hackensack Meridian Children’s Health at Joseph M. Sanzari Children’s Hospital. The sign thanks us on behalf of the hospital’s Child Life and Creative Arts Therapy team.</figcaption>
+      </figure>
+    </article>
+
+    <div class="grid2">
+      <article class="card">
+        <p class="tag">Teen mental health</p>
+        <h3>VOY: Voices of the Young</h3>
+        <p class="meta">Vice President · Grades 9 to 12</p>
+        <ul class="path"><li>Campaign Volunteer</li><li class="arrow">›</li><li>Campaign Leader</li><li class="arrow">›</li><li class="now">Vice President</li></ul>
+        <p>VOY is a student group that builds tools for teen mental health. Its anonymous peer support app, Mo Soop, launched in April 2026. I track how many teens use it.</p>
+        <p>VOY launched its second app, Mo Ri, for students with ADHD, in October 2026.</p>
+        <div class="links"><a href="https://mo-soop.glide.page" target="_blank" rel="noopener">Open Mo Soop</a><a href="https://mo-ri.glide.page" target="_blank" rel="noopener">Open Mo Ri</a></div>
+      </article>
+      <article class="card">
+        <p class="tag">Student leadership</p>
+        <h3>YGLE: Young Global Leaders of the East</h3>
+        <p class="meta">Student Vice President · Grades 9 to 12</p>
+        <ul class="path"><li>Member</li><li class="arrow">›</li><li>Event Organizing Team Leader</li><li class="arrow">›</li><li class="now">Student Vice President</li></ul>
+        <p>I organized YGLE’s 2nd Annual Global Leadership Forum in 2025, on the theme of peace. When our team split over which issues to feature, I merged both sides into one program.</p>
+      </article>
+      <article class="card">
+        <p class="tag">New this year</p>
+        <h3>UNICEF Club, Bergen Catholic</h3>
+        <p class="meta">Co-Founder and President · Grade 12</p>
+        <p>I co-founded my school’s UNICEF Club with a junior. We kept pitching it to school staff until it was approved as an official club in fall 2026. I now lead it as president.</p>
+      </article>
+      <article class="card">
+        <p class="tag">Human rights</p>
+        <h3>LiNK North Jersey Rescue Team</h3>
+        <p class="meta">Volunteer · Grades 9 to 12</p>
+        <p>With Liberty in North Korea’s North Jersey team, I raise funds for the rescue and resettlement of North Korean refugees. I also run awareness campaigns on North Korean human rights for other students.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="more">
+  <div class="wrap">
+    <div class="shead"><span class="num">04</span><h2>Music, sport, languages</h2><p>Outside class</p></div>
+    <figure class="orch">
+      <img class="wide" src="assets/arco-summer-2025.jpg" alt="The New Jersey Arco Youth Orchestra, 2025 summer session; Alex Kim stands second from left in the back row" loading="lazy">
+      <img src="assets/arco-concert-1.jpg" alt="Arco Youth Orchestra at a performance; Alex Kim stands at back right holding his viola" loading="lazy">
+      <img src="assets/arco-concert-2.jpg" alt="Arco Youth Orchestra before a community performance; Alex Kim stands in the back row" loading="lazy">
+      <figcaption>The Arco Youth Orchestra. Left: the 2025 summer session, with me second from left in the back row. Middle: back right, with my viola. Right: back row, center.</figcaption>
+    </figure>
+    <div class="grid3">
+      <article class="card small">
+        <p class="tag">Music</p>
+        <h3>Viola</h3>
+        <p>I have played viola for four years in the Bergen Catholic Chamber Ensemble and in the Arco Youth Orchestra.</p>
+      </article>
+      <article class="card small">
+        <p class="tag">Tennis</p>
+        <h3>JV Tennis</h3>
+        <p>Bergen Catholic, grades 9 to 12.</p>
+      </article>
+      <article class="card small">
+        <p class="tag">Languages</p>
+        <h3>English, Korean, Mandarin</h3>
+        <p>English is my first language. I speak Korean fluently and took two years of honors Mandarin.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<section class="block" id="honors">
+  <div class="wrap">
+    <div class="shead"><span class="num">05</span><h2>Honors</h2><p>Recognition</p></div>
+    <div class="honors">
+      <ul class="hlist">
+        <li><span class="yr">Grade 11</span><div><b>Scholastic Art &amp; Writing Awards: Silver Key, Critical Essay</b><span>2026 regional award for an essay on how the trend cycle consumes individuality.</span></div></li>
+        <li><span class="yr">Grade 12</span><div><b>Student-Choice Mentorship Award</b><span>Walk Alongside, 2026. Chosen by my mentees for a friendly atmosphere and humble service.</span></div></li>
+        <li><span class="yr">Grade 11</span><div><b>Outstanding Service Award</b><span>Given in 2025 by Clothing Donations to Help Kids in the World for more than 200 total volunteer hours.</span></div></li>
+        <li><span class="yr">Grade 12</span><div><b>National Honor Society</b><span>St. Gabriel Chapter, Bergen Catholic High School.</span></div></li>
+        <li><span class="yr">Grades 9 to 11</span><div><b>Honor roll every trimester</b><span>Principal’s List, the school’s highest honor roll, five times and First Honors four times, across all nine trimesters of grades 9 to 11.</span></div></li>
+      </ul>
+      <figure class="cert">
+        <a href="assets/scholastic-silver-key.pdf" target="_blank" rel="noopener"><img src="assets/scholastic-silver-key.jpg" alt="2026 Scholastic Art and Writing Awards Silver Key certificate presented to Alexander Kim for a critical essay"></a>
+        <figcaption>2026 Silver Key certificate. <a href="assets/scholastic-silver-key.pdf" target="_blank" rel="noopener">Open the PDF</a></figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <span><b>Alex Kim</b> · Bergen Catholic High School, Class of 2027</span>
+    <span>© 2026 Alex Kim</span>
+  </div>
+</footer>
+
+</body>
+</html>
