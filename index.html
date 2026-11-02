@@ -136,6 +136,14 @@ p{margin:0 0 14px}
 .orch img.wide{aspect-ratio:auto}
 .orch figcaption{grid-column:1/-1;font-family:var(--mono);font-size:13px;color:var(--ink-2)}
 @media (max-width:640px){.orch{grid-template-columns:1fr 1fr}.orch img.wide{grid-column:1/-1}}
+.certs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.certs .c{display:block;background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:12px;color:var(--ink)}
+.certs .c:hover{text-decoration:none;border-color:var(--violet)}
+.certs img{width:100%;border:1px solid #eee;border-radius:6px}
+.certs span{display:block;margin-top:10px;font-family:var(--mono);font-size:12.5px;color:var(--ink-2);line-height:1.5}
+.certs span b{display:block;font-family:var(--body);font-size:15.5px;font-weight:600;color:var(--ink);margin-bottom:2px}
+@media (max-width:920px){.certs{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.certs{grid-template-columns:1fr}}
 /* honors */
 .honors{display:grid;grid-template-columns:1.25fr 1fr;gap:34px;align-items:start}
 .hlist{list-style:none;margin:0;padding:0;border-top:1px solid var(--rule)}
@@ -184,6 +192,7 @@ footer b{color:#fff;font-weight:500}
       <li><a href="#tutoring">Tutoring</a></li>
       <li><a href="#service">Leadership</a></li>
       <li><a href="#more">More</a></li>
+      <li><a href="#certificates">Certificates</a></li>
       <li><a href="#honors">Honors</a></li>
     </ul>
   </div>
@@ -241,7 +250,6 @@ footer b{color:#fff;font-weight:500}
         <p>Two weeks of automation, robotics and coding, where I built projects with microcontrollers, sensors and actuators.</p>
       </article>
     </div>
-    <p class="note">Also completed: HP LIFE online courses from the HP Foundation, October 2026: <a href="assets/hp-life-strategic-planning.pdf" target="_blank" rel="noopener">Strategic Planning in the AI Age</a>, <a href="assets/hp-life-critical-thinking.pdf" target="_blank" rel="noopener">Critical Thinking in the AI Era</a>, and <a href="assets/hp-life-cybersecurity.pdf" target="_blank" rel="noopener">Introduction to Cybersecurity Awareness</a>.</p>
   </div>
 </section>
 
@@ -360,9 +368,23 @@ footer b{color:#fff;font-weight:500}
   </div>
 </section>
 
+<section class="block" id="certificates">
+  <div class="wrap">
+    <div class="shead"><span class="num">05</span><h2>Certificates</h2><p>Training and courses</p></div>
+    <div class="certs">
+      <a class="c" href="assets/cert-pfa.pdf" target="_blank" rel="noopener"><img src="assets/cert-pfa.jpg" alt="Certificate: Psychological First Aid (PFA) Online, September 21, 2026" loading="lazy"><span><b>Psychological First Aid (PFA) Online</b>National Child Traumatic Stress Network · September 21, 2026</span></a>
+      <a class="c" href="assets/cert-spr.pdf" target="_blank" rel="noopener"><img src="assets/cert-spr.jpg" alt="Certificate: Skills for Psychological Recovery (SPR) Online, September 27, 2026" loading="lazy"><span><b>Skills for Psychological Recovery (SPR) Online</b>National Child Traumatic Stress Network · September 27, 2026</span></a>
+      <a class="c" href="assets/hp-life-strategic-planning.pdf" target="_blank" rel="noopener"><img src="assets/hp-life-strategic-planning.jpg" alt="HP LIFE certificate: Strategic Planning in the AI Age" loading="lazy"><span><b>Strategic Planning in the AI Age</b>HP LIFE, HP Foundation · October 18, 2026</span></a>
+      <a class="c" href="assets/hp-life-critical-thinking.pdf" target="_blank" rel="noopener"><img src="assets/hp-life-critical-thinking.jpg" alt="HP LIFE certificate: Critical Thinking in the AI Era" loading="lazy"><span><b>Critical Thinking in the AI Era</b>HP LIFE, HP Foundation · October 26, 2026</span></a>
+      <a class="c" href="assets/hp-life-cybersecurity.pdf" target="_blank" rel="noopener"><img src="assets/hp-life-cybersecurity.jpg" alt="HP LIFE certificate: Introduction to Cybersecurity Awareness" loading="lazy"><span><b>Introduction to Cybersecurity Awareness</b>HP LIFE, HP Foundation · October 26, 2026</span></a>
+    </div>
+    <p class="note">I completed the two National Child Traumatic Stress Network courses to prepare for my work on Mo Soop, VOY’s anonymous peer support app. Click any certificate to open the PDF.</p>
+  </div>
+</section>
+
 <section class="block" id="honors">
   <div class="wrap">
-    <div class="shead"><span class="num">05</span><h2>Honors</h2><p>Recognition</p></div>
+    <div class="shead"><span class="num">06</span><h2>Honors</h2><p>Recognition</p></div>
     <div class="honors">
       <ul class="hlist">
         <li><span class="yr">Grade 11</span><div><b>Scholastic Art &amp; Writing Awards: Silver Key, Critical Essay</b><span>2026 regional award for an essay on how the trend cycle consumes individuality.</span></div></li>
